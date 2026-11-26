@@ -1,0 +1,24 @@
+# Site settings
+title: Plum Jam's Blog
+description: >-
+  一个基于 Jekyll 的个人博客，托管在 GitHub Pages 上。
+author: plumjam
+
+# URL settings
+# 用户站点 (username.github.io) 的 baseurl 必须留空
+baseurl: ""
+url: "https://plumjam.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# 时区
+timezone: Asia/Shanghai
+
+# 导航栏
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
