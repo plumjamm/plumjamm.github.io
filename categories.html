@@ -1,0 +1,26 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+<section class="categories">
+  <h1>分类目录</h1>
+  <div class="category-list">
+    {% for category in site.categories %}
+    <details class="category-item">
+      <summary>
+        <span class="category-name">{{ category[0] }}</span>
+        <span class="category-count">{{ category[1] | size }} 篇</span>
+      </summary>
+      <ul class="post-list">
+        {% for post in category[1] %}
+        <li>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endfor %}
+  </div>
+</section>
