@@ -83,7 +83,7 @@ a:hover {
 main.container {
   padding: 32px 24px 48px;
   min-height: calc(100vh - 140px);
-  background: rgba(13, 17, 23, 0.2);
+  background: rgba(13, 17, 23, 0.1);
   border-radius: 10px;
   animation: fadeInUp 0.5s ease-out;
 }
