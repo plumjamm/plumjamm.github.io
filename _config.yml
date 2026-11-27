@@ -7,7 +7,7 @@ author: plumjam
 # URL settings
 # 用户站点 (username.github.io) 的 baseurl 必须留空
 baseurl: ""
-url: "https://plumjam.github.io"
+url: "https://plumjamm.github.io"
 
 # Build settings
 markdown: kramdown
