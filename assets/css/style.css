@@ -116,6 +116,7 @@ ol {
 }
 
 code {
+  font-family: "Cascadia Code", Consolas, "Courier New", monospace;
   background: #161b22;
   padding: 2px 6px;
   border-radius: 4px;
@@ -124,6 +125,7 @@ code {
 }
 
 pre {
+  font-family: "Cascadia Code", Consolas, "Courier New", monospace;
   background: #161b22;
   padding: 16px;
   border-radius: 6px;
@@ -133,6 +135,7 @@ pre {
 }
 
 pre code {
+  font-family: inherit;
   background: none;
   padding: 0;
   color: #c9d1d9;
@@ -486,6 +489,118 @@ img {
 
 .tree-subnode[open] .tree-children {
   animation: treeExpand 0.25s ease-out;
+}
+
+/* ===== Syntax highlighting (Rouge dark theme) ===== */
+.highlight {
+  background: #161b22;
+}
+
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cs {
+  color: #8b949e;
+  font-style: italic;
+}
+
+.highlight .cp,
+.highlight .c1 {
+  color: #ffa657;
+}
+
+.highlight .cpf {
+  color: #a5d6ff;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+  color: #ff7b72;
+}
+
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss {
+  color: #a5d6ff;
+}
+
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il {
+  color: #79c0ff;
+}
+
+.highlight .nf,
+.highlight .nc,
+.highlight .nn,
+.highlight .nt {
+  color: #d2a8ff;
+}
+
+.highlight .nb,
+.highlight .na,
+.highlight .no,
+.highlight .nd,
+.highlight .ni,
+.highlight .ne,
+.highlight .nl,
+.highlight .nx,
+.highlight .py,
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+  color: #ffa657;
+}
+
+.highlight .o,
+.highlight .ow {
+  color: #ff7b72;
+}
+
+.highlight .p {
+  color: #c9d1d9;
+}
+
+.highlight .err {
+  color: #f85149;
+}
+
+.highlight .gd {
+  color: #ffa198;
+}
+
+.highlight .gi {
+  color: #7ee787;
+}
+
+.highlight .gh,
+.highlight .gu {
+  color: #58a6ff;
+}
+
+.highlight .gp {
+  color: #8b949e;
+}
+
+.highlight .w {
+  color: #c9d1d9;
 }
 
 /* ===== Responsive ===== */
