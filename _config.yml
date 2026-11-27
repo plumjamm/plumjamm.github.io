@@ -24,3 +24,10 @@ nav:
     url: /categories/
   - title: About
     url: /about/
+
+# 侧边栏目录分类（根目录）
+tree_categories:
+  - 数学
+  - 代码
+  - 早苗の美图
+  - 随笔

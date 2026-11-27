@@ -342,10 +342,6 @@ img {
   border-bottom: 1px solid #30363d;
 }
 
-.tree-title-icon {
-  color: #58a6ff;
-}
-
 .tree-node {
   margin-bottom: 2px;
 }
@@ -368,54 +364,6 @@ img {
 
 .tree-node summary::-webkit-details-marker {
   display: none;
-}
-
-.tree-arrow {
-  color: #8b949e;
-  flex-shrink: 0;
-  transition: transform 0.25s ease, color 0.2s ease;
-}
-
-.tree-node[open] .tree-arrow {
-  transform: rotate(90deg);
-  color: #58a6ff;
-}
-
-.tree-folder {
-  flex-shrink: 0;
-}
-
-.tree-folder-open {
-  display: none;
-}
-
-.tree-node[open] .tree-folder-closed {
-  display: none;
-}
-
-.tree-node[open] .tree-folder-open {
-  display: inline-block;
-}
-
-/* 分类文件夹配色 */
-.tree-node:nth-child(2) .tree-folder {
-  color: #f0883e;
-}
-
-.tree-node:nth-child(3) .tree-folder {
-  color: #a371f7;
-}
-
-.tree-node:nth-child(4) .tree-folder {
-  color: #39c5cf;
-}
-
-.tree-node:nth-child(5) .tree-folder {
-  color: #7ee787;
-}
-
-.tree-node:nth-child(6) .tree-folder {
-  color: #ffa657;
 }
 
 .tree-folder-name {
@@ -449,24 +397,10 @@ img {
 }
 
 .tree-children li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   margin: 1px 0;
 }
 
-.tree-file {
-  color: #484f58;
-  flex-shrink: 0;
-  transition: color 0.2s ease;
-}
-
-.tree-children li:hover .tree-file {
-  color: #58a6ff;
-}
-
 .tree-children a {
-  flex: 1;
   display: block;
   padding: 4px 8px;
   border-radius: 6px;
