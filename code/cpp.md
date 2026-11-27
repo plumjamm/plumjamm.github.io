@@ -22,7 +22,7 @@ permalink: /code/cpp/
 
 ---
 
-###### 1.什么是c++ {#what-is-cpp}
+### 1.什么是c++ {#what-is-cpp}
 
 我在初次看到c++时，给我一种这个玩意跟c语言有什么区别，当上手写了一段时间后感觉
 
@@ -36,7 +36,7 @@ permalink: /code/cpp/
 
 重点在于加入了面向对象的部分，因此如果你学过c语言，那么在学习c++的初期阶段会十分简单(当然只是初期)
 
-###### 2.打印Hello World {#hello-world}
+### 2.打印Hello World {#hello-world}
 
 在学习编程的时候总会提到一个经典的第一步，打印Hello World。具体的代码在c++中如下
 
