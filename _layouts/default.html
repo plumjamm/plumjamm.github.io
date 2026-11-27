@@ -19,9 +19,14 @@
     </div>
   </header>
 
-  <main class="container">
-    {{ content }}
-  </main>
+  <div class="layout">
+    <aside class="sidebar">
+      {% include sidebar.html %}
+    </aside>
+    <main class="container">
+      {{ content }}
+    </main>
+  </div>
 
   <footer class="site-footer">
     <div class="container">

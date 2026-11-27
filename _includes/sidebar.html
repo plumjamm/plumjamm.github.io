@@ -1,0 +1,18 @@
+<nav class="tree">
+  <div class="tree-title">目录</div>
+  {% for category in site.categories %}
+  <details class="tree-node" {% if page.categories contains category[0] %}open{% endif %}>
+    <summary>
+      <span class="tree-folder">{{ category[0] }}</span>
+      <span class="tree-count">{{ category[1] | size }}</span>
+    </summary>
+    <ul class="tree-children">
+      {% for post in category[1] %}
+      <li>
+        <a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active"{% endif %}>{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </details>
+  {% endfor %}
+</nav>
