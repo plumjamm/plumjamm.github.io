@@ -27,7 +27,12 @@ nav:
 
 # 侧边栏目录分类（根目录）
 tree_categories:
-  - 数学
-  - 代码
-  - 早苗の美图
-  - 随笔
+  - name: 数学
+  - name: 代码
+    children:
+      - name: c++
+        pages:
+          - title: 从0开始写的C++教程
+            url: /code/cpp/
+  - name: 早苗の美图
+  - name: 随笔

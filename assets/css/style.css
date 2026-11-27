@@ -454,6 +454,40 @@ img {
   }
 }
 
+/* ===== Tree subdirectory ===== */
+.tree-subdir {
+  margin: 2px 0;
+}
+
+.tree-subnode summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.tree-subnode summary:hover {
+  background: #21262d;
+}
+
+.tree-subnode summary::-webkit-details-marker {
+  display: none;
+}
+
+.tree-subnode .tree-folder-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.tree-subnode[open] .tree-children {
+  animation: treeExpand 0.25s ease-out;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .layout {

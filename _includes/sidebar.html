@@ -1,15 +1,45 @@
 <nav class="tree">
   <div class="tree-title">目录</div>
   {% for category in site.tree_categories %}
-  <details class="tree-node" {% if page.categories contains category %}open{% endif %}>
+  {% assign cat_active = false %}
+  {% if page.categories contains category.name %}{% assign cat_active = true %}{% endif %}
+  {% for child in category.children %}
+    {% for pg in child.pages %}
+      {% if page.url == pg.url %}{% assign cat_active = true %}{% endif %}
+    {% endfor %}
+  {% endfor %}
+  <details class="tree-node" {% if cat_active %}open{% endif %}>
     <summary>
-      <span class="tree-folder-name">{{ category }}</span>
-      <span class="tree-count">{{ site.categories[category] | size }}</span>
+      <span class="tree-folder-name">{{ category.name }}</span>
+      {% assign cat_posts = site.categories[category.name] %}
+      {% if cat_posts.size > 0 %}
+      <span class="tree-count">{{ cat_posts.size }}</span>
+      {% endif %}
     </summary>
     <ul class="tree-children">
-      {% for post in site.categories[category] %}
+      {% for post in cat_posts %}
       <li>
         <a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="active"{% endif %}>{{ post.title }}</a>
+      </li>
+      {% endfor %}
+      {% for child in category.children %}
+      {% assign child_active = false %}
+      {% for pg in child.pages %}
+        {% if page.url == pg.url %}{% assign child_active = true %}{% endif %}
+      {% endfor %}
+      <li class="tree-subdir">
+        <details class="tree-subnode" {% if child_active %}open{% endif %}>
+          <summary>
+            <span class="tree-folder-name">{{ child.name }}</span>
+          </summary>
+          <ul class="tree-children">
+            {% for pg in child.pages %}
+            <li>
+              <a href="{{ pg.url | relative_url }}" {% if page.url == pg.url %}class="active"{% endif %}>{{ pg.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </details>
       </li>
       {% endfor %}
     </ul>
